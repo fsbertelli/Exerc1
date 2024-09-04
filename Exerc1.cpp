@@ -63,11 +63,59 @@ void exerc2() {
     else if (imc > 39.9) {
         cout << "Olá " << nome << "! O seu IMC e: " << imc << " -> Obesidade Grau 3";
     }
-
-
 }
+
+void exerc3() {
+    int idade = 0, b1 = 7, b2 = 8, b3 = 9, m1 = 4, m2 = 5, m3 = 6, a1 = 1, a2 = 2, a3 = 3;
+    char conceito;
+    cout << "Informe a sua idade: ";
+    cin >> idade;
+    cout << "Informe o grupo de risco.\nB - Baixo\nM - Medio\nA - Alto\n";
+    cin >> conceito;
+    if (idade < 18) {
+        cout << "Voce deve ter idade maior que 18 anos para prosseguir." << endl;
+    }
+    else if (idade >= 18 && idade <= 24) {
+        if (conceito == 'B') {
+            cout << "Idade: " << idade << " Grupo de risco: " << b1 << endl;
+        }
+        else if (conceito == 'M') {
+            cout << "Idade: " << idade << " Grupo de risco: " << b2 << endl;
+        }
+        else if (conceito == 'A') {
+            cout << "Idade: " << idade << " Grupo de risco: " << b3 << endl;
+
+        }
+    }
+    else if (idade > 24 && idade <= 40) {
+        if (conceito == 'B') {
+            cout << "Idade: " << idade << " Grupo de risco: " << m1 << endl;
+        }
+        else if (conceito == 'M') {
+            cout << "Idade: " << idade << " Grupo de risco: " << m2 << endl;
+        }
+        else if (conceito == 'A') {
+            cout << "Idade: " << idade << " Grupo de risco: " << m3 << endl;
+        }
+    }
+    else if (idade > 40 && idade <= 70) {
+        if (conceito == 'B') {
+            cout << "Idade: " << idade << " Grupo de risco: " << a1 << endl;
+        }
+        else if (conceito == 'M') {
+            cout << "Idade: " << idade << " Grupo de risco: " << a2 << endl;
+        }
+        else if (conceito == 'A') {
+            cout << "Idade: " << idade << " Grupo de risco: " << a3 << endl;
+        }
+    }
+    else {
+        cout << "Idade invalida. Tenta novamente!" << endl;
+    }
+}
+
 int main()
 {
-  
+    exerc3();
 }
 
